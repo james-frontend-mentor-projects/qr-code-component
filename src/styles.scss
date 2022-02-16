@@ -1,0 +1,60 @@
+$dark-blue: hsl(218, 44%, 22%);
+$grey: hsl(220, 15%, 55%);
+$light-grey: hsl(212, 45%, 89%);
+$white: hsl(0, 0%, 100%);
+
+@function pxToRem($px) {
+  @return calc($px / 16) + rem;
+}
+
+* {
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $light-grey;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: pxToRem(24);
+  max-width: pxToRem(320);
+  padding: pxToRem(16);
+  background: $white;
+  border-radius: pxToRem(20);
+  box-shadow: 0 pxToRem(25) pxToRem(25) rgba(0, 0, 0, 0.05);
+}
+
+.qr-code {
+  border-radius: pxToRem(10);
+}
+
+.content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: pxToRem(16);
+  padding: pxToRem(16);
+  padding-top: 0;
+}
+
+.title {
+  font-size: pxToRem(22);
+  line-height: pxToRem(28);
+  color: $dark-blue;
+  font-weight: 700;
+}
+
+.paragraph {
+  font-size: pxToRem(15);
+  line-height: pxToRem(19);
+  color: $grey;
+  font-weight: 400;
+}

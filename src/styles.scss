@@ -33,8 +33,14 @@ body {
   box-shadow: 0 pxToRem(25) pxToRem(25) rgba(0, 0, 0, 0.05);
 }
 
-.qr-code {
+.img-wrapper {
   border-radius: pxToRem(10);
+  overflow: hidden;
+  display: flex;
+}
+
+.qr-code {
+  min-width: 0;
 }
 
 .content {
